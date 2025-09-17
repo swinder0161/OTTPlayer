@@ -1,0 +1,4 @@
+[submodule "libmedia3player"]
+	path = libmedia3player
+	url = https://github.com/swinder0161/libmedia3player.git
+	branch = master
