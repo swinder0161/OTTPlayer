@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.my.android.ottplayer'
+    namespace 'com.swinder.android.ottplayer'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.my.android.ottplayer"
+        applicationId "com.swinder.android.ottplayer"
         minSdk 29
         targetSdk 35
         versionCode 1
@@ -40,7 +40,4 @@ dependencies {
     implementation libs.navigation.ui
     implementation project(':libmedia3player')
     implementation libs.androidx.media3.ui
-    testImplementation libs.junit
-    androidTestImplementation libs.ext.junit
-    androidTestImplementation libs.espresso.core
 }

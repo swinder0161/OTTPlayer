@@ -1,17 +1,15 @@
-package com.my.android.ottplayer;
+package com.swinder.android.ottplayer;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.media3.common.util.UnstableApi;
 
 import android.util.Log;
 
-import androidx.media3.common.util.UnstableApi;
+import com.swinder.android.media3player.Media3Player;
+import com.swinder.android.ottplayer.databinding.ActivityMainBinding;
 
-import com.my.android.media3player.Media3Player;
-import com.my.android.ottplayer.databinding.ActivityMainBinding;
-
-@UnstableApi
 public class MainActivity extends AppCompatActivity implements Media3Player.Callback {
     private static final String TAG = "OTTPlayer";
     private ActivityMainBinding binding;
@@ -35,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements Media3Player.Call
         setContentView(binding.getRoot());
     }
 
+    @UnstableApi
     @Override
     public void onResume() {
         super.onResume();
@@ -53,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements Media3Player.Call
         Log.d(TAG, "< PlaybackActivity onPause()");
     }
 
+    @UnstableApi
     @Override
     public void resetPlayer() {
         Log.d(TAG, "> PlaybackActivity resetPlayer()");
@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements Media3Player.Call
         Log.d(TAG, "< PlaybackActivity releasePlayer()");
     }
 
+    @UnstableApi
     private void play() {
         Log.d(TAG, "> PlaybackActivity play()");
         releasePlayer();
